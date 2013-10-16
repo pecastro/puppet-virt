@@ -9,11 +9,12 @@ class kvm-guests {
     ensure    => running,
     virt_type => 'kvm',
     boot_order  => 'network,menu=on',
+    macaddrs    => ["00:16:3e:14:1b:a1"],
   }
 
   # clone from guest-kvm1
   virt { guest-kvm2:
-    clone     => 'guest-kvm1'
+    clone     => 'guest-kvm1',
     ensure    => running,
     virt_type => 'kvm'
   }
