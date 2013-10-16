@@ -8,6 +8,7 @@ class kvm-guests {
     cpus      => 2,
     ensure    => running,
     virt_type => 'kvm'
+    macaddrs    => ["00:16:3e:14:1b:a1"]
   }
 
   # clone from guest-kvm1
