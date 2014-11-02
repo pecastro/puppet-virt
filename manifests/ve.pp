@@ -146,7 +146,7 @@ define virt::ve (
     ensure => directory,
     owner => 'root',
     group => 'root',
-    mode => 0755,
+    mode  => '0755',
   }
 
   lvm::volume { $name:
@@ -175,4 +175,3 @@ define virt::ve (
   }
 
 }
-
